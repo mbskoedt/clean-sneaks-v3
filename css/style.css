@@ -1,0 +1,2219 @@
+@font-face {
+
+    font-family: 'axiforma';
+    src: url('../fonts/axiforma/kastelov - Axiforma Regular.otf');
+
+    font-family: 'axiforma-light-italic';
+    src: url('../fonts/axiforma/kastelov - Axiforma Light Italic.otf');
+
+
+}
+
+/* ------------- GENERELT ------------- */
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+p {
+    font-family: 'Cabin', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/*
+
+#top {
+    position: sticky;
+    top: 0;
+    width: 75px;
+    float: right;
+    z-index: 3;
+    padding: 2%;
+}
+
+*/
+
+
+/* Animeret til top knap */
+
+#circle-crop img {
+    width: 100px;
+    height: 100px;
+    margin-top: -25px;
+}
+
+#circle-crop {
+    position: sticky;
+    top: 0;
+    float: right;
+    z-index: 3;
+    padding: 2%; 
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border: 50px;
+}
+
+/* -------- CleanSneaks Århus ------ */
+
+
+
+
+/* Mobil */
+
+@media (max-width: 768px) {
+
+    p {
+        margin: 5%;
+    }
+
+    header {
+        position: relative;
+        background-color: #f1f1f1;
+        width: 100%;
+
+    }
+
+    .header-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    header h3 {
+        display: none;
+    }
+
+    .header-section-1 {
+        width: 40%;
+    }
+
+    .header-section-2 {
+        margin-left: 23%;
+    }
+
+    .header-section-2 h3 {
+        display: none;
+
+    }
+
+    .header-section-3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .header-section-3 img {
+        width: 30px;
+        height: 30px;
+        padding-left: 10%;
+        padding-right: 10%;
+        border-style: solid;
+        border-bottom: none;
+        border-top: none;
+        border-color: lightgray;
+    }
+
+    .header-section-3-2 {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .sprog-valg {
+        display: flex;
+        flex-direction: row;
+        margin-right: 27%;
+    }
+
+    .sprog-valg p {
+        padding: 7px;
+    }
+
+
+    .logo-header {
+        width: 80%;
+    }
+
+    .menuheader a {
+        text-decoration: none;
+        padding: 5px;
+    }
+
+    .menuheader a:hover {
+        color: #ff6819;
+    }
+
+    label {
+        font-size: 26px;
+        line-height: 90px;
+        display: none;
+        width: 26px;
+        float: right;
+        color: #fff;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+
+    .menuheader label {
+        color: black;
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        font-family: 'Axiforma';
+        font-size: 15px;
+        background-color: white;
+        right: 0;
+        margin-top: 340%;
+        margin-right: -60%;
+        width: 170px;
+        opacity: 0.9;
+    }
+
+    .menu a {
+        margin-right: 10%;
+    }
+
+    #forside,
+    #webshop,
+    #aarhus,
+    #silke,
+    #om,
+    #kontakt {
+        color: black;
+        text-align: right;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    #toggle:checked + .menu {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .menuheader {
+        position: relative;
+        z-index: 1;
+
+    }
+
+    #nav-icon4 {
+        width: 60px;
+        height: 45px;
+        position: relative;
+        margin: 50px auto;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+
+    #nav-icon4 span:nth-child(1) {
+        top: 0px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+
+    #nav-icon4 span:nth-child(2) {
+        top: 18px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+
+    #nav-icon4 span:nth-child(3) {
+        top: 36px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+
+    #nav-icon4.open span:nth-child(1) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: -3px;
+        left: 8px;
+    }
+
+    #nav-icon4.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+
+    #nav-icon4.open span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 39px;
+        left: 8px;
+    }
+
+    /*--------------------------styles til clean sneaks århus underside------------------*/
+
+
+    /* Landing Page på Århus siden*/
+
+    .landing-page {
+        display: flex;
+        position: relative;
+    }
+
+    .overskrift {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+
+    }
+
+    .h1-overskrift {
+        font-size: 10vw;
+        color: #ff6819;
+    }
+
+    .h2-overskrift {
+        font-family: 'axiforma-light-italic';
+        color: white;
+        opacity: 0.6;
+        font-size: 3.5vw;
+        margin-top: -20%;
+
+    }
+
+    .hero-image-mobil {
+        width: 100%;
+        height: 150vw;
+    }
+
+    .hero-image-computer {
+        display: none;
+    }
+
+
+    .landing-page ul {
+        font-family: 'Axiforma';
+        font-size: 3.5vw;
+        line-height: 28px;
+        position: absolute;
+        text-align: right;
+        list-style: none;
+        bottom: 3%;
+        right: 4%;
+        margin-right: 3%;
+    }
+
+    .landing-page li {
+        border-style: solid;
+        border-color: transparent;
+        border-right-width: 3px;
+        border-right-color: #d1641d;
+        padding-right: 7px;
+    }
+
+    .landing-page a:link {
+        color: white;
+        opacity: 0.6;
+        text-decoration: none;
+    }
+
+    .landing-page a:visited {
+        color: white;
+        opacity: 0.6;
+        text-decoration: none;
+    }
+
+    .landing-page a:hover {
+        color: #d1641d;
+        opacity: 1;
+    }
+
+    footer img {
+        width: 100%;
+    }
+
+    /* Hvem er vi? */
+
+    .hvem-er-vi h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        margin: 5%;
+        margin-top: 10%;
+    }
+
+    .hvem-er-vi img {
+        width: 100%;
+    }
+
+    #rense-video video {
+        width: 146%;
+        height: 50%;
+
+    }
+
+    #rense-video {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Så nemt er det */
+
+    .saa-nemt-er-det h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        margin: 5%;
+        margin-top: 15%;
+    }
+
+    .saa-nemt-er-det img {
+        width: 100%;
+    }
+
+    /* Tilbud og prisberegner */
+
+    .tilbud-og-prisberegner {
+        display: grid;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+
+    .tilbud-og-prisberegner h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        margin: 5%;
+    }
+
+    .tilbud-og-prisberegner h3 {
+        font-family: 'axiforma-light-italic';
+        margin: 5%;
+        font-size: 15px;
+
+    }
+
+    .rens img {
+        width: 100%;
+    }
+
+    input[type=number] {
+        width: 30%;
+        margin-left: 31%
+    }
+
+    .antal-sko p {
+        float: right;
+        text-align: center;
+    }
+
+    .antal-sko {
+        display: grid;
+    }
+
+    .tilbud {
+        display: grid;
+        grid-row-gap: 30px;
+        margin: 5%;
+    }
+
+
+    .tilvalg ul {
+        font-family: 'Axiforma';
+        list-style: none;
+    }
+
+    .tilvalg p {
+        font-size: 30px;
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        padding-left: 2%;
+    }
+
+
+
+    .antal-sko-og-tilvalg {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .total-pris p {
+        font-size: 20px;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        margin-top: 10%;
+
+    }
+
+
+    /* NY KODE checkbokse style */
+
+    input[type=checkbox],
+    input[type=number] {
+
+        -webkit-appearance: none;
+        background-color: #f1f1f1;
+        border: 1px solid #1f2022;
+        opacity: 0.7;
+
+        padding: 15px;
+
+        border-radius: 2px;
+        position: relative;
+
+    }
+
+
+    input[type=checkbox]:checked {
+        background-color: #f1f1f1;
+        border: 1px solid #1f2022;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+        color: #99a1a7;
+    }
+
+    input[type=checkbox]:checked:after {
+        content: '\2714';
+        font-size: 20px;
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        color: #ff6819;
+    }
+
+    .tilvalg li {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Anbefalinger */
+
+    .anbefalinger-container {
+        background-color: #1f2022;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-top: 25%;
+        height: 500px;
+    }
+
+    .overskrift-anbefalinger {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        text-align: center;
+        margin-top: -20%;
+    }
+
+
+    .anbefalinger {
+        position: absolute;
+        margin-top: 10%;
+    }
+
+    .anbefaling {}
+
+    .knapper {
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        margin-top: -8%;
+        width: 100%;
+    }
+
+    .knapper p {
+        color: white;
+        font-family: 'Axiforma';
+        font-size: 13px;
+        margin-top: 27px;
+    }
+
+    .knapper button {
+        color: white;
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    /* Twenty-twenty slider */
+
+    .twentytwenty-container {}
+
+    .hvorfor-clean-sneaks h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        margin: 5%;
+    }
+
+    /* Hvor er drop-off boksen? */
+
+
+    .hvor-er-boksen-tekst h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        margin: 5%;
+        margin-top: 15%;
+    }
+
+    .map-container {
+        position: relative;
+        width: 90%;
+        height: 50vh;
+        margin: 5%;
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 5px;
+        width: 100%;
+    }
+
+    /* Snippet https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp  */
+
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+        position: relative;
+        width: 20%;
+        height: auto;
+        padding-left: 10px;
+    }
+
+    .row {
+        margin: 5%;
+        display: flex;
+        align-content: center;
+    }
+
+    /* Style the images inside the grid */
+    .column img {
+        width: 100%;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .column img:hover {
+        opacity: 1;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+    }
+
+    /* The expanding image container (positioning is needed to position the close button and the text) */
+    .container {
+        position: relative;
+        width: 100%;
+        display: none;
+    }
+
+    /* Expanding image text */
+    #imgtext {
+        font-family: 'Axiforma';
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        color: white;
+        font-size: 20px;
+    }
+
+    /* Closable button inside the image */
+    .closebtn {
+        position: absolute;
+        right: 5px;
+        color: white;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    .hvor-er-boksen h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        margin: 5%;
+    }
+
+    .billede-guide p {
+        text-align: center;
+    }
+
+    /* Kontakt og åbningstider */
+
+    .kontakt-og-aabningstider {
+        margin-top: 20%;
+    }
+
+    .kontakt-og-aabningstider h2 {
+        padding-top: 5%;
+        margin: 5%;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+    }
+
+    .kontakt-og-aabningstider p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .galleri-grisk {
+        display: none;
+    }
+
+
+    /*--------------------------styles til clean sneaks forside------------------*/
+
+    /*generelt til forsiden*/
+    .landingoverskrift {
+
+        margin-top: 15%;
+        font-size: 150%;
+
+    }
+
+    body {
+        margin: 1%
+    }
+
+    .desktopimg {
+        display: none;
+    }
+
+    .storypige {
+        display: none;
+    }
+
+
+
+
+
+
+
+    /*det første af landingpage/forsiden webshop, århus renseri og Silkeborg renseri */
+
+    #landingmenu {
+        margin-top: 10%;
+    }
+
+    .deskaarhus {
+        display: none;
+    }
+
+    .desksilke {
+        display: none;
+    }
+
+    .landingoverskrift {
+        margin-left: 5%;
+    }
+
+
+    /* webshop knappen*/
+    .webshop {
+        width: 91%;
+
+    }
+
+    .webshop_container {
+        position: relative;
+        text-align: center;
+    }
+
+    .tekst_webshop {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #1f2022;
+        color: white;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 2%;
+        border: solid;
+        border-color: #024e9a;
+    }
+
+    .tekst_webshop p {
+        font-size: 25px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+
+    #webshoppil {
+        color: #024e9a;
+
+    }
+
+
+
+    /* renserierne knapper*/
+
+    .renserier {
+        display: flex;
+        width: 96%;
+        margin-left: 1.5%;
+        margin-top: 5%;
+
+    }
+
+
+    /* Århus renseri knap*/
+
+    .aarhusrenseri {
+
+        width: 90%;
+
+
+    }
+
+
+
+    .aarhuscontainer {
+        position: relative;
+        text-align: center;
+    }
+
+    .aarhus_tekst {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #1f2022;
+        color: white;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 2%;
+        border: solid;
+        border-color: #ff6819;
+
+
+
+    }
+
+    .aarhus_tekst p {
+        font-size: 100%;
+        text-align: center;
+        text-transform: uppercase;
+
+
+
+    }
+
+
+    /*Silkeborg renseri knap*/
+
+    .silkeborgrenseri {
+        width: 90%;
+        margin-left: 2.5%
+    }
+
+
+    .silkeborgcontainer {
+        position: relative;
+        text-align: center;
+    }
+
+    .silkeborg_tekst {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #1f2022;
+        color: white;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 2%;
+        border: solid;
+        border-color: #ff6819;
+    }
+
+    .silkeborg_tekst p {
+        font-size: 100%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .renseripil {
+        color: #ff6819;
+    }
+
+
+
+    /*storytelling*/
+
+
+
+    /*første storytelling, deres why*/
+    #streetfyr {
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15%
+    }
+
+
+    /*deres why, citat*/
+    .citat {
+        margin-top: 16%;
+        font-style: italic;
+        text-align: center;
+
+    }
+
+    .citatdennis {
+        font-weight: bold;
+        text-align: center;
+    }
+
+
+    /*sidste storytelling*/
+    .storysneaks {
+        width: 45%;
+        margin-left: 4%;
+        margin-top: 15%;
+    }
+
+    .storypige {
+        width: 45%;
+    }
+
+    .storypige1 {
+        width: 45%;
+    }
+
+    #landinglink,
+    #landinglink1,
+    #landinglink2 {
+        color: #1f2022;
+    }
+
+
+
+
+
+    /*footer med nyhedsbrev*/
+
+    .footerlanding {
+        margin-top: 20%;
+        background-color: #f1f1f1;
+    }
+
+
+    .nyhedsbrev {
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .tekstfelt {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navn {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .mail {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+
+    .tilmeldknap {
+        margin-top: 5%;
+        padding: 3%;
+        padding-left: 6%;
+        padding-right: 6%;
+        margin-left: 39%;
+        color: white;
+        background-color: #1f2022;
+        border: none;
+    }
+
+    .footercleansneaks {
+        text-align: center;
+        margin-top: 10%;
+    }
+
+
+    .some {
+        display: flex;
+        width: 20%;
+        margin-left: 40%;
+    }
+}
+
+
+
+
+
+
+
+/*----------------STØRRE SKÆRME-------------------*/
+
+@media all and (min-width: 769px) {
+
+
+
+
+
+    /* ------ Header menu dekstop -------- */
+
+
+
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 2%;
+        background-color: #f1f1f1;
+    }
+
+    header h3 {
+        font-family: 'Axiforma';
+        opacity: 0.4;
+        font-size: 10px;
+    }
+
+    .header-section-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+    }
+
+    .header-section-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-section-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    .header-section-3-2 {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+
+    }
+
+    .header-section-3 img {
+        width: 30px;
+    }
+
+    .sprog-valg {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sprog-valg p {
+        padding: 7px;
+    }
+
+
+    .logo-header {
+        width: 80%;
+    }
+
+    .menuheader {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Axiforma';
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    .menuheader a {
+
+        text-decoration: none;
+        padding-left: 20px;
+        color: black;
+    }
+
+    .menuheader a:hover {
+        color: #ff6819;
+    }
+
+    label {
+        margin: 0 40px 0 0;
+        font-size: 26px;
+        line-height: 100px;
+        display: none;
+        width: 26px;
+        float: right;
+        color: #fff;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    /*Clean Sneaks Forside / Landingpage*/
+    /*Generelt på forsiden*/
+
+
+    .webshop {
+        display: none;
+    }
+
+    .mobilheader {
+        display: none;
+    }
+
+    .deskheader {
+        width: 100%;
+        opacity: 0.7;
+    }
+
+    .storypige1 {
+        display: none;
+    }
+
+    #landingmenu {
+        margin-top: 4%;
+    }
+
+
+
+
+
+
+    /*desktop menu knapper landing/forsiden*/
+
+
+
+    .desktopimg,
+    .aarhusrenseri,
+    .silkeborgrenseri {
+        width: 90%;
+    }
+
+
+
+
+
+
+    /* webshop-menu-knap tekst på billeder*/
+
+
+
+    .webshop_container {
+        position: relative;
+        text-align: center;
+    }
+
+    .tekst_webshop {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #1f2022;
+        color: white;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 2%;
+        border: solid;
+        opacity: 0.9;
+        border-color: #024e9a;
+
+
+    }
+
+    .tekst_webshop p {
+        font-size: 25px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+
+    #webshoppil {
+        color: #024e9a;
+
+    }
+
+
+    .desktopwebshop {
+        transition: transform .2s
+    }
+
+    .desktopwebshop:hover {
+        transform: scale(1.1)
+    }
+
+
+
+
+
+    /* renserierne knapper tekst på billederne*/
+
+    .mobilaarhus {
+        display: none;
+    }
+
+    .mobilsilke {
+        display: none;
+    }
+
+
+    .aarhuscontainer {
+        position: relative;
+        text-align: center;
+
+
+    }
+
+    .aarhus_tekst {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #1f2022;
+        color: white;
+        opacity: 0.9;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 2%;
+        border: solid;
+        border-color: #ff6819
+    }
+
+
+    .aarhus_tekst p {
+        font-size: 25px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .deskaarhus {
+        transition: transform .2s
+    }
+
+    .deskaarhus:hover {
+        transform: scale(1.1)
+    }
+
+
+
+    .silkeborgcontainer {
+        position: relative;
+        text-align: center;
+
+
+    }
+
+    .silkeborg_tekst {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #1f2022;
+        color: white;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 2%;
+        border: solid;
+        opacity: 0.9;
+        border-color: #ff6819
+    }
+
+
+    .silkeborg_tekst p {
+        font-size: 25px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .desksilke {
+        transition: transform .2s
+    }
+
+    .desksilke:hover {
+        transform: scale(1.1)
+    }
+
+
+    .renseripil {
+        color: #ff6819;
+    }
+
+
+    /*flexbox på desktop forside*/
+
+    .landingdeskmenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*Storytelling desktop forside*/
+
+
+
+    .storytelling1 {
+        margin-top: 15%;
+        margin-left: 8%;
+        margin-right: 8%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    .fyr1 {
+        width: 40%;
+        margin-left: 5%;
+        margin-top: 5%
+    }
+
+    #streetfyr {
+        width: 100%;
+    }
+
+    .story1 {
+        width: 55%;
+        padding-top: 7%;
+
+    }
+
+
+    .storytelling2 {
+        margin-top: 15%;
+        margin-right: 8%;
+
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sko1 {
+        width: 35%;
+    }
+
+    .storysneaks {
+        width: 100%;
+    }
+
+    .story2 {
+        width: 55%;
+        padding-top: 6%
+    }
+
+
+
+    .citat {
+        margin-top: 16%;
+        margin-left: 10%;
+        font-style: italic;
+
+    }
+
+    .citatdennis {
+        font-weight: bold;
+        text-align: center;
+    }
+
+
+
+    .storytelling3 {
+        margin-top: 15%;
+        margin-left: 8%;
+        margin-right: 8%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: center;
+        margin-bottom: 15%;
+    }
+
+    .pige {
+        width: 40%;
+
+    }
+
+    .storypige {
+        width: 100%;
+    }
+
+    .storypige1 {
+        width: 100%;
+    }
+
+    .story3 {
+        width: 55%;
+        padding-top: 7%;
+        margin-right: 4%;
+    }
+
+    .landingoverskrift {
+
+        font-size: 150%
+    }
+
+    #landinglink,
+    #landinglink1,
+    #landinglink2 {
+        color: #1f2022;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* ------- Clean Sneaks Århus ----- */
+
+    /* ------- landingpage ---- */
+
+    .landing-page {
+        display: flex;
+        position: relative;
+    }
+
+    .overskrift {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+
+    }
+
+    .h1-overskrift {
+        font-size: 5vw;
+        color: #ff6819;
+    }
+
+    .h2-overskrift {
+        font-family: 'axiforma-light-italic';
+        color: white;
+        opacity: 0.6;
+        font-size: 1.65vw;
+        margin-top: -20%;
+
+    }
+
+    .hero-image-mobil {
+        display: none;
+    }
+
+    .hero-image-computer {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .landing-page ul {
+        font-family: 'Axiforma';
+        font-size: 1.3vw;
+        line-height: 28px;
+        position: absolute;
+        text-align: right;
+        list-style: none;
+        bottom: 10%;
+        right: 5%;
+        margin-right: 3%;
+    }
+
+    .landing-page li {
+        border-style: solid;
+        border-color: transparent;
+        border-right-width: 3px;
+        border-right-color: #d1641d;
+        padding-right: 7px;
+    }
+
+    .landing-page a:link {
+        color: white;
+        opacity: 0.6;
+        text-decoration: none;
+    }
+
+    .landing-page a:visited {
+        color: white;
+        opacity: 0.6;
+        text-decoration: none;
+    }
+
+    .landing-page a:hover {
+        color: #d1641d;
+        opacity: 1;
+    }
+
+    /* ----- Hvem er vi? ---- */
+
+    .hvem-er-vi {
+        margin: 8%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hvem-er-vi h2 {
+        font-size: 35px;
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+    }
+
+    .tekst-hvem-er-vi {
+        width: 45%;
+        align-self: center;
+    }
+
+    .hvem-er-vi img {
+        width: 45%;
+        height: auto;
+        align-self: center;
+    }
+
+    #rense-gif {
+        width: 70%;
+        display: hide;
+    }
+
+    #rense-video video {
+        width: 155%;
+        margin-left: -24.4%;
+
+    }
+
+    #rense-video {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    /* ------ Så nemt er det ----- */
+
+
+    .saa-nemt-er-det {
+        margin: 8%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .saa-nemt-er-det h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        font-size: 35px;
+    }
+
+    .tekst-saa-nemt-er-det {
+        width: 45%;
+        align-self: center;
+    }
+
+    .saa-nemt-er-det img {
+        width: 45%;
+        height: auto;
+        align-self: center;
+    }
+
+
+    /* ------ Prisberegner ------ */
+
+
+    .tilbud-og-prisberegner {
+        margin: 8%;
+
+    }
+
+    .tilbud-og-prisberegner h2 {
+        font-size: 35px;
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+
+    }
+
+    .tilbud-og-prisberegner h3 {
+        font-family: 'axiforma-light-italic';
+        font-size: 20px;
+    }
+
+    .tilbud {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .rens img {
+        width: 95%;
+    }
+
+    .antal-sko-og-tilvalg {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+    }
+
+    .tilvalg ul {
+        font-family: 'Axiforma';
+        list-style: none;
+        margin-left: -20%;
+    }
+
+    .tilvalg p {
+        font-size: 23px;
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+    }
+
+    input[type=number] {
+        width: 30%;
+        margin-left: 30%;
+    }
+
+    .antal-sko p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .antal-sko {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-top: 8%;
+
+    }
+
+    .total-pris {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        font-family: 'Axiforma';
+        font-size: 30px;
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        margin-top: 5%;
+
+    }
+
+
+
+    /* NY KODE checkboksestyle */
+    input[type=checkbox],
+    input[type=number] {
+
+        -webkit-appearance: none;
+        background-color: #f1f1f1;
+        border: 1px solid #1f2022;
+        opacity: 0.7;
+
+        padding: 15px;
+
+        border-radius: 2px;
+        position: relative;
+
+    }
+
+
+    input[type=checkbox]:checked {
+        background-color: #f1f1f1;
+        border: 1px solid #1f2022;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+        color: #99a1a7;
+    }
+
+    input[type=checkbox]:checked:after {
+        content: '\2714';
+        font-size: 20px;
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        color: #ff6819;
+    }
+
+    .tilvalg li {
+        display: flex;
+        align-items: center;
+    }
+
+    input[type=number] {
+        width: 30%;
+        margin-left: 32%
+    }
+
+    /* Anbefalinger */
+
+
+
+
+    .anbefalinger {
+        width: 350px;
+
+    }
+
+    .anbefaling {
+        width: 350px;
+        height: 350px;
+    }
+
+    .overskrift-anbefalinger {
+        color: white;
+        font-size: 30px;
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        text-align: center;
+        margin-top: -10%;
+    }
+
+    .anbefalinger-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 650px;
+        overflow: hidden;
+        background-color: #1f1f1f;
+    }
+
+    .knapper {
+        position: absolute;
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5%;
+
+    }
+
+    .knapper p {
+        display: none;
+    }
+
+    .knap-hoejre {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    .knap-venstre {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    /* Twenty-twenty slider */
+
+    .hvorfor-clean-sneaks h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+    }
+
+    .hvorfor-clean-sneaks-tekst {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        position: relative;
+
+    }
+
+    .hvorfor-clean-sneaks {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 8%;
+    }
+
+
+
+    /* Hvor er drop-off boksen? */
+
+    .hvor-er-boksen-container {
+        margin-top: 8%;
+    }
+
+    .map-og-guide {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hvor-er-boksen-map {
+        position: relative;
+        height: 70vh;
+        width: 50%;
+        margin-left: 5%;
+    }
+
+    .hvor-er-boksen-tekst h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+    }
+
+    .hvor-er-boksen-tekst {
+        margin: 5%;
+        margin-top: 10%;
+        width: 46%;
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .billede-guide {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 3%;
+    }
+
+    .billede-guide p {
+        margin-top: -1%;
+    }
+
+    /* Snippet https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp  */
+
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+        width: 20%;
+        padding-left: 10px;
+    }
+
+    .row {
+        width: 80%;
+        display: flex;
+        align-content: center;
+    }
+
+    /* Style the images inside the grid */
+    .column img {
+        width: 100%;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .column img:hover {
+        opacity: 1;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        display: table;
+    }
+
+    /* The expanding image container (positioning is needed to position the close button and the text) */
+    .container {
+        position: absolute;
+        width: 37%;
+        max-height: 55%;
+        overflow: hidden;
+        margin-top: 8%;
+    }
+
+    /* Expanding image text */
+    #imgtext {
+        font-family: 'Axiforma';
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        color: white;
+        font-size: 20px;
+    }
+
+    /* Closable button inside the image */
+    .closebtn {
+        position: absolute;
+        color: white;
+        font-size: 70px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+
+    /* Kontakt og pris */
+
+    .kontakt-og-aabningstider {
+        display: flex;
+        justify-content: space-around;
+        margin: 8%;
+        margin-bottom: -10%;
+    }
+
+    .kontakt-og-aabningstider h2 {
+        text-decoration: underline;
+        text-decoration-color: #ff6819;
+        padding-top: 8%;
+    }
+
+    .kontakt-og-aabningstider p {
+        font-size: 20px;
+    }
+
+    .tekst-kontakt-og-aabningstider {
+        text-align: center;
+    }
+
+    .galleri-grisk {
+        width: 40%;
+        padding-top: 3%;
+        align-self: center;
+    }
+
+
+
+    /*footer med nyhedsbrev*/
+
+
+
+    .nyheddesk {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerlanding {
+        margin-top: 20%;
+        background-color: #f1f1f1;
+
+    }
+
+    .nyhedsbrev {
+
+        text-align: center;
+    }
+
+    .mail {
+        width: 20%;
+        margin-left: 39.5%;
+    }
+
+    .tilmeldknap {
+
+        padding: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        margin-left: 45%;
+        margin-top: 1%;
+
+
+        color: white;
+        background-color: #1f2022;
+        border: none;
+    }
+
+    .footercleansneaks {
+        text-align: center;
+
+    }
+
+    .facebook {
+        width: 5%;
+    }
+
+    .instagram {
+        width: 5%;
+    }
+
+    .some {
+        text-align: center;
+        padding-bottom: 1%
+    }
+
+
+    .nyheddesk {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerlanding {
+        margin-top: 20%;
+        background-color: #f1f1f1;
+
+    }
+
+
+    .nyhedsbrev {
+
+        text-align: center;
+    }
+
+
+    .mail {
+        width: 20%;
+        margin-left: 39.5%;
+    }
+
+    .tilmeldknap {
+
+        padding: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        margin-left: 45%;
+        margin-top: 1%;
+
+
+        color: white;
+        background-color: #1f2022;
+        border: none;
+    }
+
+    .footercleansneaks {
+        text-align: center;
+
+    }
+
+    .facebook {
+        width: 5%;
+    }
+
+    .instagram {
+        width: 5%;
+    }
+
+    .some {
+        text-align: center;
+        padding-bottom: 1%
+    }
+
+
+    .nyheddesk {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerlanding {
+        margin-top: 20%;
+        background-color: #f1f1f1;
+
+    }
+
+
+    .nyhedsbrev {
+
+        text-align: center;
+    }
+
+
+
+
+
+    .mail {
+        width: 20%;
+        margin-left: 39.5%;
+    }
+
+    .tilmeldknap {
+
+        padding: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        margin-left: 45%;
+        margin-top: 1%;
+
+
+        color: white;
+        background-color: #1f2022;
+        border: none;
+    }
+
+    .footercleansneaks {
+        text-align: center;
+
+    }
+
+    .facebook {
+        width: 5%;
+    }
+
+    .instagram {
+        width: 5%;
+    }
+
+    .some {
+        text-align: center;
+        padding-bottom: 1%
+    }
+
+
+
+
+    @media all and (min-width: 1100px) {
+
+        /*forside storytelling*/
+
+        #test p {
+            line-height: 200%
+        }
+
+        .story1,
+        .citat,
+        .story3 {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+
+        .story1 {
+            padding-top: 10%;
+        }
+
+        .citat {
+            padding-top: 2%;
+            text-align: center;
+        }
+
+        .story3 {
+            padding-top: 5%;
+        }
+
+        .landingoverskrift {
+            font-size: 250%;
+        }
+
+        /*forside footer*/
+
+
+        .footerlanding {
+            margin-top: 20%;
+            background-color: #f1f1f1;
+        }
+
+
+        .nyhedsbrev {
+
+            text-align: center;
+        }
+
+
+        .some {
+            text-align: justify;
+        }
+
+
+        .mail {
+            width: 20%;
+            margin-left: 39.5%;
+        }
+
+        .tilmeldknap {
+
+            padding: 1%;
+            padding-left: 2%;
+            padding-right: 2%;
+            margin-left: 46.5%;
+            margin-top: 1%;
+
+
+            color: white;
+            background-color: #1f2022;
+            border: none;
+        }
+
+        .footercleansneaks {
+            text-align: center;
+
+        }
+
+        .facebook {
+            width: 5%;
+        }
+
+        .instagram {
+            width: 5%;
+        }
+
+        .handelsb {
+            float: right;
+            margin-right: 2%;
+            margin-top: 0.5%;
+        }
+
+
+
+
+        #test {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        /*NY KODE responsiv på stor skærm*/
+
+
+        #main {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .billede-guide .container {
+            width: 30%;
+        }
+
+        header {
+            padding-left: 10%;
+            background-color: #f1f1f1;
+
+        }
+
+        .overskrift {
+            margin-left: 16%;
+        }
+
+
+
+
+    }
